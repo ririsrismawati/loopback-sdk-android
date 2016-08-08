@@ -188,7 +188,7 @@ public class UserRepository<U extends User> extends ModelRepository<U> {
 
         String className = getClassName();
 
-        contract.addItem(new RestContractItem("/" + getNameForRestUrl() + "/login?include=user", "POST"),
+        contract.addItem(new RestContractItem("/" + getNameForRestUrl() + "/login", "POST"),
                 className + ".login");
         contract.addItem(new RestContractItem("/" + getNameForRestUrl() + "/logout", "POST"),
                 className + ".logout");
